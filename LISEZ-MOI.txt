@@ -1,0 +1,27 @@
+GESTIONNAIRE DE COMMERCE EN LIGNE — DÉMO TEMPORAIRE
+
+Cette version permet de gérer les produits, le stock, les clients et les ventes depuis un navigateur, avec un compte administrateur et une base de données en ligne.
+
+MISE EN LIGNE SUR RENDER
+
+1. Créez un dépôt Git privé et ajoutez-y tous les fichiers de ce dossier.
+2. Dans Render, choisissez « New » puis « Blueprint » et reliez le dépôt.
+3. Render repère le fichier render.yaml. Lors de la configuration, définissez un mot de passe administrateur long et unique pour ADMIN_PASSWORD. Ne l’écrivez pas dans le code et ne le partagez pas.
+4. Lancez le déploiement. Quand il est terminé, ouvrez l’adresse se terminant par onrender.com et connectez-vous avec l’identifiant « admin » et le mot de passe choisi à l’étape 3.
+
+IMPORTANT POUR LA DÉMO GRATUITE
+
+- Le service web gratuit peut se mettre en veille après une période sans visite. Le premier chargement suivant peut prendre un peu de temps.
+- La base de données gratuite Render expire au bout de 30 jours et n’inclut pas de sauvegardes automatiques gérées. Cette offre convient à une démonstration temporaire, pas à la gestion durable des données réelles d’un commerce.
+- Téléchargez régulièrement une sauvegarde JSON dans le menu Outils et gardez-en une copie sur votre ordinateur. La sauvegarde peut être restaurée depuis le même menu.
+- La restauration remplace toutes les données qui se trouvent actuellement dans l’application en ligne.
+
+TRANSFÉRER LES DONNÉES DE L’ANCIENNE APPLICATION
+
+1. Ouvrez l’ancienne application locale et téléchargez sa sauvegarde JSON dans Outils.
+2. Ouvrez la nouvelle adresse en ligne et connectez-vous.
+3. Dans Outils, choisissez « Restaurer une sauvegarde », puis sélectionnez le fichier JSON téléchargé.
+
+L’application utilise l’offre gratuite Render définie dans render.yaml. Les limites de cette offre peuvent changer ; consultez les pages officielles avant de l’utiliser :
+https://render.com/docs/free
+https://render.com/docs/blueprint-spec
