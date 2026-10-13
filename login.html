@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <meta name="theme-color" content="#19342d">
+  <title>Connexion — Comptoir</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="login-page">
+  <main class="login-card">
+    <div class="login-logo"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 5.5 4h13l1.5 6.5M4 10.5h16v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5v-9Z"/><path d="M4 10.5a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 5 0M9 21v-5h6v5"/></svg></span><span>comptoir<span>.</span></span></div>
+    <div class="eyebrow">ESPACE PRIVÉ</div>
+    <h1>Bienvenue</h1>
+    <p class="login-intro">Connectez-vous pour gérer les ventes, le stock et les clients de votre commerce.</p>
+    {% if error %}<div class="login-error" role="alert">{{ error }}</div>{% endif %}
+    <form method="post" class="login-form">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <label class="form-field">Identifiant<input name="username" type="text" autocomplete="username" required autofocus></label>
+      <label class="form-field">Mot de passe<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button button-primary" type="submit">Se connecter</button>
+    </form>
+    <div class="login-foot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg><span>Connexion protégée · données privées</span></div>
+  </main>
+</body>
+</html>
